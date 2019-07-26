@@ -5,7 +5,7 @@ RUN apk --no-cache add \
     python3-tkinter \
     cmake \
     git
-    
+
 RUN pip install -U\
     tqdm \
     tilemapbase \
@@ -15,4 +15,11 @@ RUN pip install -U\
     SQLAlchemy \
     fasvaorm \
     pymodconf \
-    dagmar 
+    dagmar
+
+RUN apk --no-cache add linux-headers
+
+RUN pip install -U \
+    psutil
+
+
