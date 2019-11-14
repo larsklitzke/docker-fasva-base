@@ -13,13 +13,11 @@ RUN pip install -U\
     watchdog \
     aiohttp==2.3.10 \
     SQLAlchemy \
-    fasvaorm \
-    pymodconf \
-    dagmar
+    pymodconf
 
 RUN apk --no-cache add linux-headers
 
 RUN pip install -U \
     psutil
 
-
+RUN apk add --upgrade sqlite
